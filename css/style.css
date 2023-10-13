@@ -1,0 +1,152 @@
+/** reset **/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin';
+}
+
+ul, ol, li {
+    list-style-type: none;
+}
+
+/** cierre reset **/
+
+
+
+
+/* header */
+
+
+/* logo */
+.logo{
+    background-color: #f3b235;
+    padding-bottom: 30px;
+}
+.logotipo{
+    width: 130px;
+}
+
+
+/* navbar */ 
+.bg-color{
+    background-color: #f3b235;
+}
+.bg-personalized{
+    background-color: #f9d14c;
+}
+
+.nav{
+    padding: 40px;
+}
+
+/* cierre navbar */ 
+
+
+
+
+
+
+/* main */
+
+body{
+    background-color: #f9d14c;
+}
+.type_main{
+    background-color: #f3b235;
+    display: flex;
+    color: #000;
+    justify-content: center;
+    padding: 75px;
+    font-weight: bold;
+}
+
+/* cards busqueda */
+.cards{
+    background-color: #f3b235;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img{
+    padding: 30px;
+    height: 450px;
+    border-radius: 15px;
+}
+.card-img:hover{
+    height: 470px;
+    transition: 0.5s;
+}
+
+/* cierre */
+
+
+/* cards "lo más nuevo"  */
+
+.product img{
+    max-width: 100%;
+}
+
+.product{
+    max-width: 20rem;
+    margin: 2rem auto;
+    box-shadow: 0.1rem .2rem #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #62823b;
+}
+
+.product div{
+    position: relative;
+}
+
+.product div p{
+    position: absolute;
+    top: 1rem;
+    right: 0px;
+    background-color: #000;
+    color: white;
+    padding: 1rem;
+}
+
+.product-title{
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: .5rem;
+    color: white;
+}
+
+.product-price{
+    font-weight: 600;
+    margin-top: .4rem;
+    color: rgba(255, 255, 255, 0.562);
+}
+
+.market-btn{
+    text-decoration: none;
+    background-color: #847d67;
+    color: white;
+    padding: 1rem;
+    margin-top: .4rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.market-btn:hover{
+    background-color: #867e62;
+    color: rgba(255, 255, 255, 0.788);
+    border: solid .2rem #867e62;
+    font-weight: 600;
+}
+
+/* cierre */
+
+
+
+/* cierre main */
