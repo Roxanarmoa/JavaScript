@@ -4,7 +4,7 @@ const products = [
     {
         id: 1,
         title: 'CUBE NUROAD EX R29',
-        thumbnail:"/img/CUBEruta_nuroadpro-r29m-aluminio.png",
+        thumbnail:"img/CUBEruta_nuroadpro-r29m-aluminio.png",
         span: 'NUEVO',
         price: 800000,
     },
@@ -18,14 +18,14 @@ const products = [
     {
         id: 3,
         title: 'TOPMEGA SUNSHINE R29',
-        thumbnail:"/img/TOPMEGA_sunshine-r29s-aluminio.png",
+        thumbnail:"img/TOPMEGA_sunshine-r29s-aluminio.png",
         span: 'NUEVO',
         price: 372500,
     },
     {
         id: 4,
         title: 'VENZO ATIX EX R29',
-        thumbnail:"/img/VENZO_atix-ex-r29l-aluminio.png",
+        thumbnail:"img/VENZO_atix-ex-r29l-aluminio.png",
         span: 'NUEVO',
         price: 420000,
     }];
