@@ -9,8 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
-    <!-- link JavaScript -->
-    <script defer src="./js/script.js"> </script>
     <!-- link css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- icono -->
@@ -30,29 +28,28 @@
         <div class="logo">
             <img class="logotipo" src="./img/logotipo.png" alt="logotipo">
         </div>
+        <!-- navbar 2 -->
         
-        <nav class="navbar navbar-expand-lg bg-personalized -body-tertiary ">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><button>
-                    </div>
-                    <div class="offcanvas-body ">
-                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 ">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">/   Bicicletas</a>
-                            </li>
-                        </ul>
+            <!-- navbar 3 carrito-->
+            <nav class="navbar bg-header fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand cream-text" href="#"></a>
+                    <button class="navbar-toggler cream-text" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="bi bi-cart cream-text"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end bg-header" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title cream-text" id="offcanvasNavbarLabel">Carrito</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body carrito">
+                            <h2></h2>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </nav>
         </nav>
 
         <!-- carousel -->
@@ -139,53 +136,7 @@
 
         <!-- productos nuevos -->
 
-        <section class="cards">
 
-            <article class="product">
-                <div>
-                    <img src="img/CUBEruta_nuroadpro-r29m-aluminio.png" alt="">
-                    <p><span>NUEVO</span></p>
-                </div>
-                <p class="product-title"> CUBE NUROAD EX R29 </p>
-                <p class="product-price">$ <span> 800.000</span> </p>
-                <a href=""  class="market-btn"> Añadir al carrito</a>
-            </article>
-
-
-
-            <article class="product">
-                <div>
-                    <img src="img/MERIDA_bignine15-r29l-aluminio-verde.png" alt="">
-                    <p><span>NUEVO</span></p>
-                </div>
-                <p class="product-title"> MÉRIDA BIG NINE 400 R29 </p>
-                <p class="product-price">$ <span> 389.000 </span> </p>
-                <a href=""  class="market-btn"> Añadir al carrito</a>
-            </article>
-
-
-
-            <article class="product">
-                <div>
-                    <img src="img/TOPMEGA_sunshine-r29s-aluminio.png" alt="">
-                    <p><span>NUEVO</span></p>
-                </div>
-                <p class="product-title"> TOPMEGA SUNSHINE R29 </p>
-                <p class="product-price">$ <span> 372.500 </span> </p>
-                <a href=""  class="market-btn"> Añadir al carrito</a>
-            </article>
-
-            <article class="product">
-                <div>
-                    <img src="img/VENZO_atix-ex-r29l-aluminio.png" alt="">
-                    <p><span>NUEVO</span></p>
-                </div>
-                <p class="product-title"> VENZO ATIX EX R29 </p>
-                <p class="product-price">$ <span> 420.000 </span> </p>
-                <a href=""  class="market-btn"> Añadir al carrito</a>
-            </article>
-
-        </section>
 
 
 
@@ -206,9 +157,15 @@
     <!-- cierre footer --> 
 
 
+
+    
+<!-- link  BS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> 
+<!-- Link JS-->
+<script src="js/app.js"></script>
+
 </body>
 
-<!-- link BS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
 
 </html>

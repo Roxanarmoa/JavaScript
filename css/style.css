@@ -40,6 +40,7 @@ ul, ol, li {
     padding: 40px;
 }
 
+
 /* cierre navbar */ 
 
 
@@ -62,6 +63,7 @@ body{
 }
 
 /* cards busqueda */
+
 .cards{
     background-color: #f3b235;
     display: flex;
@@ -85,6 +87,13 @@ body{
 
 /* cards "lo más nuevo"  */
 
+section {
+    background-color: #f3b235;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
 .product img{
     max-width: 100%;
 }
@@ -138,12 +147,12 @@ body{
     text-align: center;
 }
 
-.market-btn:hover{
+/*.market-btn:hover{
     background-color: #867e62;
     color: rgba(255, 255, 255, 0.788);
     border: solid .2rem #867e62;
     font-weight: 600;
-}
+}*/
 
 /* cierre */
 
