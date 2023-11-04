@@ -11,7 +11,7 @@ const products = [
     {
         id: 2,
         title: 'MÉRIDA BIG NINE 400 R29',
-        thumbnail:"/img/MERIDA_bignine15-r29l-aluminio-verde.png",
+        thumbnail:"img/MERIDA_bignine15-r29l-aluminio-verde.png",
         span: 'NUEVO',
         price: 389000,
     },
