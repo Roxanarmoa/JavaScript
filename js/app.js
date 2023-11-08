@@ -1,5 +1,5 @@
-
 // PRODUCTOS
+
 const products = [
     {
         id: 1,
@@ -38,17 +38,39 @@ const contenedor = document.createElement('section');
 for (const product of products){
     
     contenedor.innerHTML += `
-                        <article class="product" id='${product.id}'>
+                        <article id='${product.id}' class="product" >
                             <div>
                                 <img src="${product.thumbnail}" alt= ""</img>
                                 <p><span>${product.span}</span></p>
                             </div>
                             <p class="product-title">${product.title}</p>
                             <p class="product-price">$${product.price}</p>
-                            <button class = "market-btn" onclick="agregarAlCarrito(${product.id})">Agregar al carrito</button>
+                            <button class = "market-btn" onclick="agregarAlCarrito(${product.id})"id"agregar-${product.id}"=>Agregar al carrito</button>
                         </article>`;
                         document.body.append(contenedor); 
 };
+
+
+//Borrar datos
+
+function borrarBicicleta(id){
+    const index = carrito.findIndex((item)=>item.id===id);
+
+    if (index !== -1){
+
+        carrito.splice(index,1);
+        localStorage.setItem('carrito',JSON.stringify(carrito));
+        
+        const carritoElement =document.querySelector('.carrito');
+        const itemElement = document.getElementById(id);
+
+        if(itemElement){
+            itemElement.remove();
+        }
+        
+    }
+    mostrarCarrito();
+}
 
 
 //Función para agregar al carrito (consola)
@@ -60,7 +82,47 @@ function agregarAlCarrito(id) {
     if(bicicleta && !carrito.some((item) => item.id === id)){
         carrito.push(bicicleta);
 
-        localStorage.setItem('carrito',(carrito));
-        console.log(bicicleta)
+        localStorage.setItem('carrito',JSON.stringify(carrito)); 
+        console.log(carrito)
     }
 }
+
+
+
+
+// Agregar al carrito (web)
+
+function mostrarCarrito(){
+    const carritoHtml = document.querySelector('.carrito')
+    carritoHtml.innerHTML = '';
+    
+    const carritoLS = JSON.parse(localStorage.getItem('carrito'));
+    
+
+    carritoLS.forEach((item) => {
+        const carritoItem = document.createElement('div');
+        carritoItem.classList.add('carrito-item');
+        carritoItem.innerHTML =`
+        <article id='${item.id}' class="carrito-container" >
+            <div class="carrito-body">
+                <img class="img-cart" src="${item.thumbnail}" alt= ""</img>
+                <p class="title-cart">${item.title}</p>
+                <p class="price-cart">$${item.price}</p>
+                <button class="borrar-button" data-id=${item.id}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/></svg></button>
+
+            </div>
+            
+        </article>`;
+        
+
+        const deleteBtn = carritoItem.querySelector('.borrar-button');
+        deleteBtn.addEventListener('click',()=>{
+            borrarBicicleta(item.id);
+        })
+
+        carritoHtml.appendChild(carritoItem);
+    });
+}
+mostrarCarrito();
+

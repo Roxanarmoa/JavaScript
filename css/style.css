@@ -85,6 +85,9 @@ body{
 /* cierre */
 
 
+
+
+
 /* cards "lo más nuevo"  */
 
 section {
@@ -147,12 +150,45 @@ section {
     text-align: center;
 }
 
-/*.market-btn:hover{
-    background-color: #867e62;
-    color: rgba(255, 255, 255, 0.788);
-    border: solid .2rem #867e62;
-    font-weight: 600;
-}*/
+
+
+
+/*  cards en carrito */
+.img-cart{
+    width: 100%;
+}
+.carrito-body{
+    max-width: 50%;
+    margin: 2rem auto;
+    box-shadow: 0.1rem .2rem #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #62823b;
+}
+.price-cart{
+    font-weight: 30;
+    color: rgba(255, 255, 255, 0.562);
+}
+
+.title-cart{
+    padding: 5px;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: .5rem;
+    color: white;
+}
+
+.borrar-button{
+    text-decoration: none;
+    background-color: #847d67;
+    color: white;
+    cursor: pointer;
+    width: 60px;
+    text-align: center;
+}
+
 
 /* cierre */
 
