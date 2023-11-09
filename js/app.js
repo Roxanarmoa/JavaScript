@@ -51,6 +51,7 @@ for (const product of products){
 };
 
 
+
 //Borrar datos
 
 function borrarBicicleta(id){
@@ -87,6 +88,16 @@ function agregarAlCarrito(id) {
     }
 }
 
+//Toastify
+const toastBtn = document.querySelectorAll('.market-btn');
+for (const btn of toastBtn) {
+    btn.addEventListener('click', () => {
+        Toastify({
+            text: 'Producto agregado con éxito.',
+            duration: 3000,
+        }).showToast();
+    });
+}
 
 
 
@@ -114,7 +125,6 @@ function mostrarCarrito(){
             </div>
             
         </article>`;
-        
 
         const deleteBtn = carritoItem.querySelector('.borrar-button');
         deleteBtn.addEventListener('click',()=>{
@@ -125,4 +135,9 @@ function mostrarCarrito(){
     });
 }
 mostrarCarrito();
+
+
+
+
+
 
