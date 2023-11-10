@@ -151,7 +151,18 @@ section {
 }
 
 
+/* container busqueda */
 
+.box-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.busqueda{
+    align-items: center;
+}
 
 /*  cards en carrito */
 .img-cart{
@@ -190,8 +201,60 @@ section {
 }
 
 
-/* cierre */
 
+/* Cards Búsqueda */
+
+.img-find{
+    width: 100%;
+}
+.carrito-container{
+    width: 10%;
+    margin: 2rem auto;
+    box-shadow: 0.1rem .2rem #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #62823b;
+}
+
+.price-find{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.562);
+}
+
+.title-find{
+    text-align: center;
+    padding: 5px;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: .5rem;
+    color: white;
+}
+
+.busqueda{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+.btn-find{
+    background-color: #847d67;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 0 2px 2px 0;
+    color: white;
+    cursor: pointer;
+    width: 80px;
+    height: 45px;
+}
+
+.input-find{
+    width: 250px;
+    height: 45px;
+}
+
+
+/* cierre */
 
 
 /* cierre main */
