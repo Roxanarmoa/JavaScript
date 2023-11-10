@@ -97,6 +97,9 @@ for (const btn of toastBtn) {
         Toastify({
             text: 'Producto agregado con éxito.',
             duration: 3000,
+            style: {
+                background: "green",
+            },
         }).showToast();
     });
 }
@@ -168,26 +171,29 @@ const nameInput = document.querySelector('#input-name');
 const buscador = document.querySelector('#input-find');
 const resultado = document.querySelector('#resultados');
 
-function buscarBiciletas(){
+function buscarBicicletas() {
     const nombre = nameInput.value;
-    if (bicicletas){
-        const bicicletaEncontrada= bicicletas.find(bicicleta=>bicicleta.title===nombre)
-        if(bicicletaEncontrada){
+    if (bicicletas) {
+        const bicicletaEncontrada = bicicletas.find(bicicleta => bicicleta.title === nombre);
+        if (bicicletaEncontrada) {
             resultado.innerHTML = `
-            <article id='${bicicletaEncontrada.id}' class="carrito-container" >
+            <article id='${bicicletaEncontrada.id}' class="carrito-container">
                 <div class="find-body">
-                    <img class="img-find" src="${bicicletaEncontrada.thumbnail}" alt= ""</img>
+                    <img class="img-find" src="${bicicletaEncontrada.thumbnail}" alt=""></img>
                     <p class="title-find">${bicicletaEncontrada.title}</p>
                     <p class="price-find">$${bicicletaEncontrada.price}</p>
-                    <button class = "market-btn" onclick="agregarAlCarrito(${bicicletaEncontrada.id})"id"agregar-${bicicletaEncontrada.id}"=>Agregar al carrito</button>
+                    <button class="market-btn" onclick="agregarAlCarrito(${bicicletaEncontrada.id})" id="agregar-${bicicletaEncontrada.id}">Agregar al carrito</button>
                 </div>
             </article>`;
-        } else{
-            resultado.innerHTML = `<h2>Error, no se encontro </h2>`
+
+            // Mostrar una notificación de éxito usando Toastify
+            Toastify({
+                text: "¡Bicicleta encontrada!",
+                style: {
+                    background: "green",
+                },
+            }).showToast();
         }
-    }else {
-        resultado.innerHTML = `<h2>Error, los datos no estan disponibles </h2>`
     }
 }
-
-buscador.addEventListener('click',buscarBiciletas);
+buscador.addEventListener('click', buscarBicicletas);

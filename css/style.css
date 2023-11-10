@@ -207,14 +207,10 @@ section {
 .img-find{
     width: 100%;
 }
-.carrito-container{
-    width: 10%;
-    margin: 2rem auto;
-    box-shadow: 0.1rem .2rem #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+
+.find-body{
+    margin-top: 30px;
+    width: 200px;
     background-color: #62823b;
 }
 
